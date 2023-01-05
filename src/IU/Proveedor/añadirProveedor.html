@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../resetMeyer.css">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./buscarProveedor.html">Buscar proveedor</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./añadirProveedor.html">Añadir proveedor</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 p-4 my-auto">
+                <form class="card card-body" id="formularioCrearProveedor">
+                    <legend>Nuevo proveedor</legend>
+                    <div class="form-group mb-2">
+                        <label>Identificador*</label>
+                        <input id="id" type="text" placeholder="Identificador del proveedor" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Nombre*</label>
+                        <input id="nombre" type="text" placeholder="Nombre del proveedor" class="form-control">
+                        </datalist>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Dirección*</label>
+                        <input id="direccion" type="text" list="listaEtiqueta" placeholder="Dirección del proveedor" class="form-control">
+                        <datalist id="listaDireccion">
+                        </datalist>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Teléfono</label>
+                        <input id="telefono" type="text" placeholder="Teléfono del proveedor" class="form-control">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Email</label>
+                        <input id="email" type="text" placeholder="Email del proveedor" class="form-control">
+                        </datalist>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label>Contacto</label>
+                        <input id="contacto" type="text" step="any" placeholder="Contacto del proveedor" class="form-control">
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        Añadir
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./añadirProveedor.js"></script>
+</body>
+</html>

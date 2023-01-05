@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./buscarProveedor.html">Buscar proveedor</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./añadirProveedor.html">Añadir proveedor</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 p-4">
+                <form class="card card-body" id="buscarProveedor">
+                    <legend id="usuarioId">Buscar usuario</legend>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input id="opcionBusquedaSimple" name="tipoBusqueda" type="radio" class="form-check-input" name="optionsRadios" checked>
+                            Busqueda simple
+                        </label>
+                        <label class="form-check-label">
+                            <input id="opcionBusquedaAvanzada" name="tipoBusqueda" type="radio" class="form-check-input" name="optionsRadios">
+                            Busqueda avanzada
+                        </label>
+                    </div>
+                    <div id="busquedaSimple">
+                        <div class="form-group my-1">
+                            <label class="form-label">Buscar por</label>
+                            <select id="criterioBusquedaSimple" type="text" class="form-select mb-2">
+                                <option>identificador</option>
+                                <option>nombre</option>
+                                <option>dirección</option>
+                                <option>teléfono</option>
+                                <option>email</option>
+                                <option>contacto</option>
+                            </select>
+                            <input id="valorBusquedaSimple" class="form-control mb-2" type="text" placeholder="Busqueda" list="coincidencias">
+                            <datalist id="coincidencias">
+                            </datalist>
+                        </div>
+                    </div>
+                    <div id="busquedaAvanzada" hidden>
+                        <div class="form-group mb-2">
+                            <input id="id" type="text" placeholder="Identificador" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="nombre" type="text" placeholder="Nombre" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="direccion" type="text" placeholder="Dirección" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="telefono" type="text" placeholder="Teléfono" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="email" type="number" step="any" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="contacto" type="text" placeholder="Contacto" class="form-control">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        Buscar
+                    </button>
+                </form>
+                <div id="actualizar">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Identificador</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contacto</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id = "resultado">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="./buscarProveedor.js"></script>
+</body>
+</html>

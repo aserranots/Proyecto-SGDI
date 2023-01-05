@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav class = "nav nav-tabs">
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="../inicio.html">Regresar</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="./usuario.html">Datos de cuenta</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="./gestionarPermisos.html">Gestionar permisos</a>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 p-4">
+                <form class="card card-body" id="buscarInsumo">
+                    <legend id="usuarioId">Buscar usuario</legend>
+                    <div class="form-group my-1">
+                        <label class="form-label">Buscar por</label>
+                        <select id="criterioBusquedaSimple" type="text" class="form-select mb-2">
+                            <option>usuario</option>
+                            <option>nombre</option>
+                            <option>dirección</option>
+                            <option>telefono</option>
+                            <option>cargo</option>
+                            <option>correo</option>
+                        </select>
+                        <input id="valorBusquedaSimple" class="form-control mb-2" type="text" placeholder="Busqueda" list="coincidencias">
+                        <datalist id="coincidencias">
+                        </datalist>
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        Buscar
+                    </button>
+                </form>
+                <form class="card card-body mt-3" id="uscarInsumo">
+                    <legend id="usuarioId">Permisos del usuario</legend>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoCrearInsumo" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoCrearInsumo">Permiso crear insumo</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoLeerInsumo" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoLeerInsumo">Permiso leer insumo</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoActualizarInsumo" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoActualizarInsumo">Permiso actualizar insumo</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoEliminarInsumo" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoEliminarInsumo">Permiso eliminar insumo</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoCrearExistencia" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoCrearExistencia">Permiso crear existencia</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoLeerExistencia" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoLeerExistencia">Permiso leer existencia</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoActualizarExistencia" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoActualizarExistencia">Permiso actualizar existencia</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisoEliminarExistencia" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisoEliminarExistencia">Permiso eliminar existencia</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisosTodos" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisosTodos">Todos</label>
+                    </div>
+                    <div class="form-check form-switch mb-2">
+                        <input id="permisosNinguno" class="form-check-input" type="checkbox" placeholder="Busqueda" list="coincidencias">
+                        <label class="form-check-label" for="permisosNinguno">Ninguno</label>
+                    </div>
+                    <button class="btn btn-primary mt-3">
+                        Actualizar
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-9">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Telefono</th>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Correo</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id = "resultado">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="./gestionarPermisos.js"></script>
+</body>
+</html>
